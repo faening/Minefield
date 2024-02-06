@@ -13,7 +13,7 @@ private var COLOR_BG_MARKED = Color(8, 179, 247)
 private var COLOR_BG_EXPLOSION = Color(189, 66, 68)
 private var COLOR_TXT_GREEN = Color(0, 100, 0)
 
-class ButtonField(private val field: Field) : JButton() {
+class FieldButton(private val field: Field) : JButton() {
     init {
         font = font.deriveFont(Font.BOLD)
         background = COLOR_BG_DEFAULT

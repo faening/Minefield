@@ -1,9 +1,9 @@
 package model
 
 class GameBoard(
-    private val rows: Int,
-    private val columns: Int,
-    private val mines: Int
+    val rows: Int,
+    val columns: Int,
+    val mines: Int
 ) {
     private val fields = ArrayList<ArrayList<Field>>()
     private val callbacks = ArrayList<(GameBoardEvent) -> Unit>()
@@ -73,7 +73,7 @@ class GameBoard(
         }
     }
 
-    private fun forEachFields(callback: (Field) -> Unit) {
+    fun forEachFields(callback: (Field) -> Unit) {
         fields.forEach { row ->
             row.forEach(callback)
         }
