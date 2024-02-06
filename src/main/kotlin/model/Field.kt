@@ -39,7 +39,7 @@ data class Field(
         }
     }
 
-    fun changeMarking() {
+    fun changeMark() {
         if (closed) {
             marked = !marked
             val event = if (marked) FieldEvent.MARKED else FieldEvent.UNMARKED
